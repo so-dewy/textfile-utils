@@ -310,6 +310,11 @@ internal class MergeSortTest {
     }
 
     @Test
+    fun `test sort oom`(@TempDir dir: Path) {
+        testDefaultSortResourceFile(dir, "/oom.nt")
+    }
+
+    @Test
     fun `test sort small csv-file with empty lines at the end`(@TempDir dir: Path) {
         val content = """
             #_ffdf27f2-9acf-4a39-9c9d-66aa77b37ba3|A
